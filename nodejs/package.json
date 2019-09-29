@@ -1,0 +1,29 @@
+{
+  "name": "vivani-meet-samples-js",
+  "version": "0.1.0",
+  "description": "A nodejs sample on how to integrate with Vivani Meet API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meet-rs-api/api-samples"
+  },
+  "keywords": [
+    "vivani",
+    "meet",
+    "interviews",
+    "api",
+    "sdk"
+  ],
+  "author": "Vivani doo, Svilajnac",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meet-rs-api/api-samples/issues"
+  },
+  "homepage": "https://github.com/meet-rs-api/api-samplese#readme",
+  "dependencies": {
+    "node-fetch": "^2.0.0"
+  }
+}
