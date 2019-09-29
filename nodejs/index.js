@@ -1,6 +1,6 @@
 var fetch = require('node-fetch')
 
-const HOST = 'https://int.meet.rs';
+const HOST = 'https://api.meet.rs';
 const API_KEY = 'YOUR API KEY HERE';
 const API_SECRET = 'YOUR API SECRET HERE';
 
