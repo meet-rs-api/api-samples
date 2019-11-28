@@ -26,7 +26,7 @@ Here are the scenarios which we will cover here:
 - [Creating a Meet](#creating-a-meet)
 - [Meet participants](#meet-participants)
 - Meet addon configuration
-- Meet scheduling
+- [Meet scheduling] (#meet-scheduling)
 - Working with Meet projects (aka "interview job positions") 
 - Manage tenants
 - Webhooks
@@ -269,7 +269,7 @@ Here is how would Meet creation request look like in this scenario:
 
   ```
 
-NB: In case of Zumi Zumi participant our access rule contains both provider and condition to be used while in case of Jack Sparrow there is only provider. The reason for this is that in case condition email is the same as user email, condition can be ommited.
+> NB: In case of Zumi Zumi participant our access rule contains both provider and condition to be used while in case of Jack Sparrow there is only provider. The reason for this is that in case condition email is the same as user email, condition can be ommited.
 
 How would this Meet work when defined like this?
 
@@ -365,7 +365,7 @@ Meet API makes this type of scenarios really simple (note definition of the seco
 
 ```
 
-NB: Second participant has only role without any access rule definition which is fine as API will create for such entry implicitly.
+> NB: Second participant has only role without any access rule definition which is fine as API will create for such entry implicitly.
 
 ```pseudo
     accessRole: {
@@ -413,8 +413,7 @@ Sometimes Meet needs to be just a bit more constrained so anyone who knows a pas
 
 ```
 
-NB: Only users who know the given passcode can enter the Meet as Guest.
-
+> NB: Only users who know the given passcode can enter the Meet as Guest.
 
 #### Guest with identity
 
@@ -456,5 +455,40 @@ Sometimes you need a Meet where only a specific participant will be allowed to j
 
 ```
 
-NB: John Smith will have to authenticate with Microsoft in order to be allowed allowed to join the Meet but only in a role of a Guest.
+> NB: John Smith will have to authenticate with Microsoft in order to be allowed allowed to join the Meet but only in a role of a Guest.
+
+## Meet scheduling
+
+### Meeting duration
+
+Every Meet created, by default is created with duration:
+
+- 20 minutes (if a free tier Meet is created)
+- 60 minutes (if a normal Meet is created)
+
+If this duration is what you need, you don't need to send any payload in the body of the POST request creating a Meet.
+
+In case you would want a meet with 45 min duration you will need to define scheduling info to contain that non-default duration value
+
+```pseudo
+{
+    schedulingInfo: {
+        "duration": 45
+    }
+}
+```
+
+You can achieve the same when creating thhe Meet in dashboar in General step by changing duration value
+![alt text](https://meet-cdn.azureedge.net/assets/docs/pro_general_duration.png "Meet duration definition")
+
+> NB: Creation of the 60 min Meet is free, only the minutes consumed by at least 2 participants are charged.
+
+### Scheduling type
+
+Every Meet can be scheduled in one of the next 3 ways:
+
+- No predefined scheduling
+- Manual scheduling
+- Automatic schheduling
+
 
