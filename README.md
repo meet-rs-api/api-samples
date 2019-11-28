@@ -461,12 +461,12 @@ Sometimes you need a Meet where only a specific participant will be allowed to j
 
 ### Meeting duration
 
-Every Meet created, by default is created with duration:
+Every Meet created, by default is created with next durations:
 
-- 20 minutes (if a free tier Meet is created)
+- 20 minutes (if a free Meet is created)
 - 60 minutes (if a normal Meet is created)
 
-If this duration is what you need, you don't need to send any payload in the body of the POST request creating a Meet.
+If this durations are what you need, you are good to go - no need to send any payload in the body of the POST request used to create your Meet.
 
 In case you would want a meet with 45 min duration you will need to define scheduling info to contain that non-default duration value
 
