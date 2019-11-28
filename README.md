@@ -26,8 +26,8 @@ Here are the scenarios which we will cover here:
 - [Creating a Meet](#creating-a-meet)
 - [Meet participants](#meet-participants)
 - Meet addon configuration
-- [Meet scheduling] (#meet-scheduling)
-- Working with Meet projects (aka "interview job positions") 
+- [Meet scheduling](#meet-scheduling)
+- Working with Meet projects (aka "interview job positions")
 - Manage tenants
 - Webhooks
 
@@ -490,5 +490,3 @@ Every Meet can be scheduled in one of the next 3 ways:
 - No predefined scheduling
 - Manual scheduling
 - Automatic schheduling
-
-
