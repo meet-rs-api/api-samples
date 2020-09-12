@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/meet-rs-api/api-samplese#readme",
   "dependencies": {
-    "node-fetch": "^2.0.0"
+    "node-fetch": "^2.6.1"
   }
 }
